@@ -1,2 +1,2 @@
-# Kubernetes-for-Absolute-Beginners
-ficheros de cursos de kubernetes realizados
+# Kubernetes courses
+Repository containing files written in kubernetes courses
