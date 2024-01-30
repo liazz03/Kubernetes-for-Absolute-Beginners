@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Pod
+metadata:
+  name: python-hello-world-pod
+  labels:
+    app: python-hello-world
+spec:
+  containers:
+  - name: python-hello-world-container
+    image: python-hello-world
+    imagePullPolicy: IfNotPresent #necessary to avoid cache problems
