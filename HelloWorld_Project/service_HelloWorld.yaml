@@ -1,13 +1,15 @@
 apiVersion: v1
 kind: Service
 metadata:
-  name: flask-service
+  name: hello-world-service
+  labels:
+    name: hello-world-service
+    app: python-hello-world
 spec:
-  selector:
-    app: python-hello-world-app # label your pod uses for selectioon
+  type: NodePort
   ports:
-    - protocol: TCP
-      port: 80  # choose an internal port
-      targetPort: 80
-      nodePort: 30800 # eternal port
-  type: NodePort  # use NodePort for simplicity
+    - port: 80
+      targetPort: 5000
+  selector:
+    name: python-hello-world-pod
+    app: python-hello-world
