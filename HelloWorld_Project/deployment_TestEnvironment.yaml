@@ -1,0 +1,27 @@
+apiVersion: apps/v1
+kind: Deployment
+metadata:
+  name: test-environment-deploy
+  labels:
+    name: test-environment-deploy
+    app: test-environment
+spec:
+  replicas: 1
+  selector:
+    matchLabels:
+      name: test-environment-pod
+      app: test-environment
+    
+  template:
+    metadata:
+      name: test-environment-pod
+      labels:
+        name: test-environment-pod
+        app: test-environment
+    spec:
+      containers:
+        - name: test-environment-container
+          image: test-environment
+          ports:
+            - containerPort: 5000
+          imagePullPolicy: IfNotPresent #necessary to avoid cache problems
