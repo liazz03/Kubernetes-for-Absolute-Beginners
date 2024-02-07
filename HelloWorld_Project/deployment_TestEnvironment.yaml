@@ -23,5 +23,5 @@ spec:
         - name: test-environment-container
           image: test-environment
           ports:
-            - containerPort: 5000
+            - containerPort: 5001
           imagePullPolicy: IfNotPresent #necessary to avoid cache problems
