@@ -1,2 +1,2 @@
 # Kubernetes courses
-Repository containing files written in kubernetes courses
+Repository containing different files used for k8s deployments.
